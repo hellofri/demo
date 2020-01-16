@@ -1,13 +1,15 @@
-package com.example.common;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.*;
+package com.example.demo.common;
 
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * mybatis自动生成代码补充
@@ -81,8 +83,8 @@ public class MyGenerator {
      * @param templatePathname 模板所在目录路径
      * @param pathname 待生成的文件路径，目录要创建好，否则会报错
      * @param templateName 模板名称
-     * @param fileName 待生成的文件名称
-     */
+     * @param fileName 待生成的文件名称*/
+
     public static void writeFile(Map map,String templatePathname,String pathname,String templateName,String fileName) {
         try {
             Configuration cfg = new Configuration();
@@ -99,7 +101,6 @@ public class MyGenerator {
             e.printStackTrace();
         }
     }
-
 
 
 }
