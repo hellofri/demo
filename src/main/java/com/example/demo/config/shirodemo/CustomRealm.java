@@ -16,6 +16,9 @@ public class CustomRealm extends AuthorizingRealm {
         String username = (String) SecurityUtils.getSubject().getPrincipal();
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         Set<String> stringSet = new HashSet<>();
+        if(username.equals("test")){
+            stringSet.add("user:list");
+        }
         stringSet.add("user:show");
         stringSet.add("user:admin");
         info.setStringPermissions(stringSet);

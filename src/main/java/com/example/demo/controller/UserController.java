@@ -5,16 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * https://blog.csdn.net/bicheng4769/article/details/86668209
- */
-@RequestMapping("/test")
+@RequestMapping("/user")
 @Controller
-public class TestController {
-    @RequiresPermissions("user:show")
+public class UserController {
+    @RequiresPermissions("user:list")
     @ResponseBody
     @RequestMapping("/show")
-    public String show() {
-        return "show-test";
+    public String showUser() {
+        return "这是学生信息";
     }
 }

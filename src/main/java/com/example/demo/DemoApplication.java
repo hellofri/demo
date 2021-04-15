@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @Controller
-@EnableRedisHttpSession
+//@EnableRedisHttpSession
 public class DemoApplication {
 
 	public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class DemoApplication {
 		return "curl http://localhost:8080/hello******";
 	}
 
-	@RequestMapping(value = "say")
+	@RequestMapping(value = "say"	)
 	public String say(){
 		return "AAA";
 	}
